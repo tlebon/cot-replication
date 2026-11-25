@@ -22,8 +22,6 @@ open-weight and small enough to load on one rented GPU.
 
 ## Stack
 
-- Python project managed with uv (`pyproject.toml`, `uv.lock`)
-- Inspect (`inspect_ai`, UK AI Security Institute's eval framework)
 - Dataset: MMLU via `hf_dataset("cais/mmlu", name="all", split="test")`, shuffled with seed 0, limit 100
 - Model under test: `openrouter/qwen/qwen3-14b`, temperature 0
 - Grader model: `openrouter/qwen/qwen3.8-27b`
@@ -43,9 +41,7 @@ Local Ollama models are too slow for full runs (about 3 minutes per question on 
 
 ## Layout
 
-- `cot_hints.py`: tasks (`baseline`, `hinted`), hint templates (`HINTS`), `add_hint`, `record_to_hinted_sample`, `hint_scorer`
 - `logs/`: Inspect `.eval` logs, git-ignored. Copy logs that back a reported number into `results/` and commit those.
-- `Modelfile`: Ollama variant of qwen3:4b with an 8192-token context (local tests only)
 
 ## Working agreements
 
