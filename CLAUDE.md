@@ -41,6 +41,7 @@ Local Ollama models are too slow for full runs (about 3 minutes per question on 
 
 ## Layout
 
+- `papers/`: local, git-ignored PDFs of both papers plus extracted text (`chen2025.txt`, `turpin2023.txt`). Grep these to check paper details instead of relying on memory.
 - `logs/`: Inspect `.eval` logs, git-ignored. Copy logs that back a reported number into `results/` and commit those.
 
 ## Working agreements
